@@ -1,44 +1,36 @@
-name: Build and Deploy Documentation
+name: Deploy Documentation
+
 on:
   push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-  workflow_dispatch:
+    branches: [main]
 
 permissions:
-  contents: write
   pages: write
   id-token: write
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+      
+      - name: Remove old docs directory
+        run: rm -rf docs  # Limpia cualquier docs anterior
+      
+      - name: Setup Doxygen
+        run: sudo apt-get install -y doxygen graphviz
+      
+      - name: Generate Documentation
+        run: doxygen Doxyfile
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
-      - name: Build Doxygen Documentation
-        uses: mattnotmitt/doxygen-action@v1
-        with:
-          doxyfile-path: ./Doxyfile
-
-      - name: Build Jekyll Site
-        run: |
-          echo "# Simulación de Partículas" > docs/index.md
-          echo "---" >> docs/index.md
-          echo "layout: default" >> docs/index.md
-          echo "title: Inicio" >> docs/index.md
-          echo "---" >> docs/index.md
-          cat README.md >> docs/index.md
-
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'docs/html'
-
+      
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
