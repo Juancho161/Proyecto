@@ -1,0 +1,76 @@
+\doxysection{metodos.\+hpp File Reference}
+\hypertarget{metodos_8hpp}{}\label{metodos_8hpp}\index{metodos.hpp@{metodos.hpp}}
+
+
+Métodos de generación y actualización de partículas.  
+
+
+{\ttfamily \#include "{}objeto.\+hpp"{}}\newline
+{\ttfamily \#include "{}parametros.\+hpp"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{metodos_8hpp_abc93aa690f0e931944b5226a110e2f99}{generar\+\_\+particulas}} (std\+::vector$<$ \mbox{\hyperlink{classParticula}{Particula}} $>$ \&particulas, const \mbox{\hyperlink{structParametrosSimulacion}{Parametros\+Simulacion}} \&params)
+\begin{DoxyCompactList}\small\item\em Genera N partículas aleatorias. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{metodos_8hpp_a248c5de0b3608c77dbad9eb0858b7b52}{actualizar\+\_\+simulacion}} (std\+::vector$<$ \mbox{\hyperlink{classParticula}{Particula}} $>$ \&particulas)
+\begin{DoxyCompactList}\small\item\em Actualiza todas las partículas un paso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{metodos_8hpp_a041cf2391190132dfceaecd510451ef8}{empaquetar\+\_\+datos}} (const std\+::vector$<$ \mbox{\hyperlink{classParticula}{Particula}} $>$ \&particulas, std\+::vector$<$ double $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em Convierte datos a buffer para ZMQ. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Métodos de generación y actualización de partículas. 
+
+Métodos para generar y actualizar partículas.
+
+\doxysubsection{Function Documentation}
+\Hypertarget{metodos_8hpp_abc93aa690f0e931944b5226a110e2f99}\label{metodos_8hpp_abc93aa690f0e931944b5226a110e2f99} 
+\index{metodos.hpp@{metodos.hpp}!generar\_particulas@{generar\_particulas}}
+\index{generar\_particulas@{generar\_particulas}!metodos.hpp@{metodos.hpp}}
+\doxysubsubsection{\texorpdfstring{generar\_particulas()}{generar\_particulas()}}
+{\footnotesize\ttfamily void generar\+\_\+particulas (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classParticula}{Particula}} $>$ \&}]{particulas,  }\item[{const \mbox{\hyperlink{structParametrosSimulacion}{Parametros\+Simulacion}} \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Genera N partículas aleatorias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em particulas} & Vector de partículas \\
+\hline
+{\em params} & Parámetros \\
+\hline
+\end{DoxyParams}
+\Hypertarget{metodos_8hpp_a248c5de0b3608c77dbad9eb0858b7b52}\label{metodos_8hpp_a248c5de0b3608c77dbad9eb0858b7b52} 
+\index{metodos.hpp@{metodos.hpp}!actualizar\_simulacion@{actualizar\_simulacion}}
+\index{actualizar\_simulacion@{actualizar\_simulacion}!metodos.hpp@{metodos.hpp}}
+\doxysubsubsection{\texorpdfstring{actualizar\_simulacion()}{actualizar\_simulacion()}}
+{\footnotesize\ttfamily void actualizar\+\_\+simulacion (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classParticula}{Particula}} $>$ \&}]{particulas }\end{DoxyParamCaption})}
+
+
+
+Actualiza todas las partículas un paso. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em particulas} & Vector de partículas \\
+\hline
+\end{DoxyParams}
+\Hypertarget{metodos_8hpp_a041cf2391190132dfceaecd510451ef8}\label{metodos_8hpp_a041cf2391190132dfceaecd510451ef8} 
+\index{metodos.hpp@{metodos.hpp}!empaquetar\_datos@{empaquetar\_datos}}
+\index{empaquetar\_datos@{empaquetar\_datos}!metodos.hpp@{metodos.hpp}}
+\doxysubsubsection{\texorpdfstring{empaquetar\_datos()}{empaquetar\_datos()}}
+{\footnotesize\ttfamily void empaquetar\+\_\+datos (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classParticula}{Particula}} $>$ \&}]{particulas,  }\item[{std\+::vector$<$ double $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Convierte datos a buffer para ZMQ. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em particulas} & Vector de partículas \\
+\hline
+{\em buffer} & Buffer de salida \\
+\hline
+\end{DoxyParams}
