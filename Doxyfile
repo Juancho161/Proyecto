@@ -2,48 +2,90 @@ PROJECT_NAME = "Simulación de Partículas"
 PROJECT_BRIEF = "Simulación de partículas en 3D con colisiones elásticas"
 OUTPUT_DIRECTORY = docs
 
-# SOLO estos archivos
+# ARCHIVOS C++
 INPUT = main.cpp \
         objeto.cpp objeto.hpp \
         metodos.cpp metodos.hpp \
-        parametros.hpp \
-        visual.py \
-        histograma.py \
-        README.md
+        parametros.hpp
 
-# Solo estas extensiones
-FILE_PATTERNS = *.cpp *.hpp *.h *.py *.md
-RECURSIVE = NO  # NO buscar recursivamente
-EXCLUDE = .github/ docs/ *.o *.out  # Excluir estos
+# ARCHIVOS PYTHON
+INPUT += visual.py \
+         histograma.py
 
+# DOCUMENTACIÓN
+INPUT += README.md
+
+# CONFIGURACIÓN GENERAL
+FILE_PATTERNS = 
+RECURSIVE = NO
 EXTRACT_ALL = YES
 EXTRACT_PRIVATE = NO
 EXTRACT_STATIC = NO
-EXTRACT_LOCAL_CLASSES = YES
-EXTRACT_LOCAL_METHODS = NO
-
 SOURCE_BROWSER = YES
-INLINE_SOURCES = NO
 
+# ORGANIZACIÓN POR SECCIONES
+USE_MDFILE_AS_MAINPAGE = README.md
+
+# Crear grupos para C++
+ALIASES += "cppgroup=@defgroup C++_Files"
+ALIASES += "hppfile=@addtogroup C++_Files"
+ALIASES += "cppfile=@addtogroup C++_Files"
+
+# Crear grupos para Python
+ALIASES += "pythongroup=@defgroup Python_Files"
+ALIASES += "pyfile=@addtogroup Python_Files"
+
+# HTML
 GENERATE_HTML = YES
 HTML_OUTPUT = html
 GENERATE_TREEVIEW = YES
 DISABLE_INDEX = NO
+GENERATE_TAGFILE = docs/tags
 
+# DIAGRAMAS
 HAVE_DOT = YES
 CLASS_DIAGRAMS = YES
-COLLABORATION_GRAPH = YES
+COLLABORATION_GRAPH = NO
 UML_LOOK = NO
+DOT_IMAGE_FORMAT = svg
+INTERACTIVE_SVG = YES
 
-# Excluir bibliotecas del sistema
-EXCLUDE_SYMBOLS = zmq:: *std::* *::std::*
-EXCLUDE_PATTERNS = /usr/* /usr/include/*
+# EXCLUIR BIBLIOTECAS
+EXCLUDE_SYMBOLS = zmq::* *std::* *::std::* *_* *__* *_t *_T *::detail*
+STRIP_CODE_COMMENTS = NO
 
-# Para C++
-OPTIMIZE_OUTPUT_FOR_C = NO
-OPTIMIZE_OUTPUT_JAVA = NO
-BUILTIN_STL_SUPPORT = YES
+# CONFIGURACIÓN C++
+OPTIMIZE_OUTPUT_FOR_C = YES
+BUILTIN_STL_SUPPORT = NO
 CPP_CLI_SUPPORT = NO
+SORT_MEMBER_DOCS = YES
+SORT_BRIEF_DOCS = YES
+SORT_BY_SCOPE_NAME = YES
 
-# Para Python
+# CONFIGURACIÓN PYTHON
 PYTHON_DOCSTRING = YES
+OPTIMIZE_OUTPUT_PYTHON = YES
+
+# PÁGINAS DE MÓDULOS
+GROUPING = YES
+SUBGROUPING = YES
+INLINE_GROUPED_CLASSES = YES
+INLINE_SIMPLE_STRUCTS = YES
+
+# EXCLUIR
+EXCLUDE = .github/ docs/ *.o *.out
+EXCLUDE_PATTERNS = */usr/* */usr/include/*
+
+# ESTRUCTURA DE NAVEGACIÓN
+TOC_INCLUDE_HEADINGS = 3
+GENERATE_HTMLHELP = NO
+GENERATE_CHI = NO
+GENERATE_QHP = NO
+GENERATE_ECLIPSEHELP = NO
+
+# BUSQUEDA
+SEARCHENGINE = YES
+SERVER_BASED_SEARCH = NO
+EXTERNAL_SEARCH = NO
+SEARCHDATA_FILE = searchdata.xml
+LAYOUT_FILE = DoxygenLayout.xml

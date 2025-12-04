@@ -1,3 +1,9 @@
+/**
+ * @file objeto.hpp
+ * @brief Clase Particula y métodos de colisión
+ * @ingroup Core
+ */
+
 #include "objeto.hpp"
 #include "parametros.hpp"
 #include <cmath>

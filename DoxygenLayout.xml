@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doxygenlayout version="1.0">
+  <navindex>
+    <tab type="mainpage" visible="yes" title="Inicio"/>
+    
+    <tab type="user" visible="yes" title="📁 Código C++">
+      <tab type="user" visible="yes" title="Núcleo">
+        <tab type="classes" visible="yes" title="Clases">
+          <tab type="classlist" visible="yes" title="Lista"/>
+          <tab type="classindex" visible="no"/>
+          <tab type="hierarchy" visible="yes" title="Jerarquía"/>
+        </tab>
+        <tab type="files" visible="yes" title="Archivos">
+          <tab type="filelist" visible="yes" title="Lista"/>
+        </tab>
+      </tab>
+      <tab type="user" visible="yes" title="Métodos">
+        <tab type="globals" visible="yes" title="Funciones"/>
+      </tab>
+    </tab>
+    
+    <tab type="user" visible="yes" title="🐍 Código Python">
+      <tab type="user" visible="yes" title="Visualización">
+        <tab type="files" visible="yes" title="Scripts"/>
+      </tab>
+      <tab type="user" visible="yes" title="Análisis">
+        <tab type="files" visible="yes" title="Scripts"/>
+      </tab>
+    </tab>
+    
+    <tab type="examples" visible="yes" title="Ejemplos"/>
+    <tab type="pages" visible="yes" title="Documentación"/>
+  </navindex>
+</doxygenlayout>

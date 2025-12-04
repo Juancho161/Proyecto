@@ -1,3 +1,9 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal de la simulación
+ * @ingroup C++_Code
+ */
+
 #include "metodos.hpp"
 #include "parametros.hpp"
 #include <zmq.hpp>
