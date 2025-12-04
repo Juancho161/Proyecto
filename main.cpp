@@ -1,8 +1,3 @@
-/**
- * @file main.cpp  
- * @brief Programa principal de la simulación
- */
-
 #include "metodos.hpp"
 #include "parametros.hpp"
 #include <zmq.hpp>
@@ -17,14 +12,12 @@
 
 volatile bool running = true;
 
-/// @brief Maneja señal de interrupción (Ctrl+C)
-/// @param signal Número de señal
 void signal_handler(int signal) {
     std::cout << "Recibida señal de interrupción. Cerrando..." << std::endl;
     running = false;
 }
 
-/// @brief Muestra ayuda de línea de comandos
+
 void mostrar_ayuda() {
     std::cout << "Uso: ./simulador.o [OPCIONES]\n"
               << "Opciones:\n"
@@ -38,10 +31,7 @@ void mostrar_ayuda() {
               << "Ejemplo: ./simulador.o -N 1000 -L 1500.0 -dt 0.01\n";
 }
 
-/// @brief Función principal
-/// @param argc Cantidad de argumentos
-/// @param argv Array de argumentos
-/// @return 0 si éxito, 1 si error
+
 int main(int argc, char* argv[]) {
     std::signal(SIGINT, signal_handler);
     std::signal(SIGTERM, signal_handler);

@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-"""
-@file visual.py
-@brief Visualización 3D de la simulación
-"""
-
 import zmq
 import numpy as np
 from vispy import scene, app

@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-"""
-@file histograma.py  
-@brief Histogramas de distribución de partículas
-"""
-
 import zmq
 import numpy as np
 import matplotlib.pyplot as plt

@@ -13,7 +13,7 @@ Simulación de partículas en 3D con colisiones elásticas, implementada en C++ 
 
 ## Dependencias
 
-# Runtime de ZeroMQ
+# ZeroMQ
 - libzmq5
 
 # Python
@@ -24,10 +24,18 @@ Simulación de partículas en 3D con colisiones elásticas, implementada en C++ 
 - matplotlib
 
 ## Compilación
-```bash
+-bash
 g++ -O3 -march=native -ffast-math -funroll-loops -flto -fno-trapping-math -fno-math-errno -std=c++17 -fopenmp main.cpp objeto.cpp metodos.cpp -lzmq -o simulador.o
 
 # Dependecias adicionales para compilación
 - g++
 - libzmq3-dev
 - libomp-dev
+
+## Ejecutar
+- ./simulador.o 
+- Cambiar parametros ./simulador.o -h
+
+# En otra terminal
+- Ejecutar "python3 visual.py" para obtener la visualizaión.
+- Ejecutar "python3 histograma.py" para obtener el histograma.

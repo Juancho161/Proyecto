@@ -1,9 +1,3 @@
-/**
- * @file metodos.hpp
- * @brief Métodos de generación y actualización de partículas
- * @ingroup Methods
- */
-
 #include "metodos.hpp"
 #include <random>
 #include <cmath>
