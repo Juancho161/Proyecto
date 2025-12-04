@@ -1,3 +1,8 @@
+/**
+ * @file objeto.hpp
+ * @brief Clase Particula - representa una partícula en la simulación
+ */
+
 #ifndef OBJETO_HPP
 #define OBJETO_HPP
 

@@ -1,3 +1,8 @@
+/**
+ * @file metodos.hpp
+ * @brief Métodos para generar y actualizar partículas
+ */
+
 #ifndef METODOS_HPP
 #define METODOS_HPP
 

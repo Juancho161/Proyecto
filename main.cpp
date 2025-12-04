@@ -1,7 +1,6 @@
 /**
- * @file main.cpp
+ * @file main.cpp  
  * @brief Programa principal de la simulación
- * @ingroup C++_Code
  */
 
 #include "metodos.hpp"

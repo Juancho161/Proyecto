@@ -1,3 +1,8 @@
+/**
+ * @file parametros.hpp
+ * @brief Parámetros de configuración de la simulación
+ */
+
 #ifndef PARAMETROS_HPP
 #define PARAMETROS_HPP
 

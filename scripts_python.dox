@@ -1,0 +1,9 @@
+/**
+@page python_scripts Scripts Python
+
+@section visual_py visual.py
+@brief Visualización 3D en tiempo real usando VisPy
+
+@section histograma_py histograma.py  
+@brief Generación de histogramas de distribución
+*/
